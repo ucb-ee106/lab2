@@ -30,6 +30,7 @@ def talker():
         
         # Publish our string to the 'chatter_talk' topic
         pub.publish(pub_string)
+        print(rospy.get_name() + ": I sent \"%s\"" % pub_string)
         
         # Use our rate object to sleep until it is time to publish again
         r.sleep()

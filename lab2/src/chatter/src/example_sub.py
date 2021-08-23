@@ -1,4 +1,4 @@
-# !/usr/bin/env python
+#!/usr/bin/env python
 # The line above tells Linux that this file is a Python script, and that the OS
 # should use the Python interpreter in /usr/bin/env to run it. Don't forget to
 # use "chmod +x [filename]" to make this script executable.
@@ -13,7 +13,7 @@ from std_msgs.msg import String
 def callback(message):
 
     # Print the contents of the message to the console
-    print(rospy.get_name() + ": I heard %s" % message.data)
+    print(rospy.get_name() + ": I heard \"%s\"" % message.data)
 
 # Define the method which contains the node's main functionality
 def listener():
